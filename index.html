@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -11,15 +12,18 @@
     body {
       font-family: 'Roboto', sans-serif;
     }
+
     .container {
       max-width: 1200px;
       margin: 0 auto;
       padding: 0 1rem;
     }
+
     .banner-slider {
       position: relative;
       overflow: hidden;
     }
+
     .banner-slide {
       position: absolute;
       top: 0;
@@ -29,11 +33,13 @@
       opacity: 0;
       transition: opacity 0.5s ease-in-out;
     }
+
     .banner-slide.active {
       opacity: 1;
     }
   </style>
 </head>
+
 <body class="bg-gray-50 text-gray-900">
 
   <!-- Top banner -->
@@ -46,25 +52,22 @@
     <div class="container mx-auto flex items-center justify-between p-4">
       <!-- Logo -->
       <a href="index.html" class="flex items-center space-x-2">
-        <img src="https://winmart.vn/_next/static/images/logo-white-800x800-e4e120626c9ef3f3244a28f4dc6ce54c.png" 
-             alt="WinMart" 
-             class="h-8 w-auto" />
+        <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI4LjMuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCA3OTIgMjE5LjYiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDc5MiAyMTkuNjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgoJLnN0MHtmaWxsOiNGRkZGRkY7fQo8L3N0eWxlPgo8Zz4KCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik03MzEuNywxNTQuMWMwLTIuMi0wLjctNC4xLTIuMi01LjZjLTEuNS0xLjUtMy4yLTIuMy01LjMtMi4zYy0xLjIsMC0yLjMsMC4yLTMuMywwLjgKCQljLTEuMiwwLjYtMi40LDEuNC0zLjcsMi40YzAsMC0xLjcsMS41LTMuMSwxLjVjLTMuMywwLTMuOS01LjMtMy45LTEwLjRWOTVoOS42YzIuNCwwLDQuMy0wLjMsNS42LTAuOWMwLjMtMC4yLDEuNC0wLjgsMS40LTMuNQoJCWMwLTMuMi0xLjItMy44LTEuNy00Yy0xLTAuNS0zLjMtMS4xLTguMy0xLjFoLTYuNVY2NS42YzAtOC0zLjgtMTEuOC0xMS45LTExLjhjLTguMSwwLTExLjksMy44LTExLjksMTEuOHYxOS45aC0zLjgKCQljLTMuOCwwLTUuNiwwLjUtNi40LDFjLTEuMSwwLjUtMS4zLDIuNC0xLjMsMy45YzAsMS4zLDAuNCwyLjMsMS4yLDMuMmMwLjQsMC41LDEuNywxLjQsNS44LDEuNGg0LjZ2NDAuNmMwLDEyLjYsOS42LDIxLjcsMTQsMjQuMQoJCWM0LjUsMi41LDkuNywzLjgsMTUuNSwzLjhjMy45LDAsNy43LTAuOSwxMS4xLTIuNkM3MzAuMiwxNTkuNCw3MzEuNywxNTcuMSw3MzEuNywxNTQuMSIvPgoJPHBhdGggY2xhc3M9InN0MCIgZD0iTTI2NC45LDMzLjdjLTQuOC0xLjQtOS45LDAuOC0xMiw1LjZjLTE3LjksNDIuMS00My40LDEwNy00My40LDEwN3MtMTAtMjEuNS0yMC43LTQ0LjkKCQljMTEuNy0yOS45LDIyLjEtNTcsMjIuMS01N2MwLjYtMS40LDEuOS04LjMtNi45LTEwLjhjLTQuOC0xLjQtOS45LDAuOC0xMiw1LjZjLTQuNywxMS05LjksMjMuNS0xNSwzNi4xYy01LjItMTEuOC05LjctMjItMTItMjcuOQoJCWMtMy45LTEwLTEyLjgtMTUuOC0yNC4yLTE0LjRjLTEzLjMsMS43LTE4LjEsMTItMTUuOCwyMC4yYzIuMyw3LjksMTcuMSw0Mi40LDMxLjIsNzMuNmMtNC43LDExLjctNy43LDE5LjQtNy43LDE5LjQKCQlTMTEyLjIsNjguNiwxMDQsNDcuNWMtMy45LTEwLTEyLjgtMTUuOC0yNC4yLTE0LjRjLTEzLjMsMS43LTE4LjIsMTItMTUuOCwyMC4yYzQuMiwxNC40LDUwLjUsMTE4LjEsNTcuMiwxMjcuNAoJCWMzLjcsNS4yLDguOSw4LjksMTcuNCw4LjljOS4yLDAsMTUuMy0zLjEsMTkuMS0xMC42YzEuMi0yLjQsNS4zLTEyLjMsMTAuNi0yNS43YzYuNiwxNC4xLDExLjksMjQuNywxMy44LDI3LjQKCQljMy43LDUuMiw4LjksOC45LDE3LjQsOC45YzkuMiwwLDE1LjMtMy4xLDE5LjEtMTAuNmM0LjgtOS40LDUzLjItMTM0LjUsNTMuMi0xMzQuNUMyNzIuNCw0My4xLDI3My43LDM2LjIsMjY0LjksMzMuNyIvPgoJPHBhdGggY2xhc3M9InN0MCIgZD0iTTM2MS4yLDE1MS45YzAsNy45LDMuOCwxMS42LDExLjksMTEuNmM4LjEsMCwxMS45LTMuNywxMS45LTExLjZsLTAuMi0zNS43YzAtMTAuNC0yLjItMTcuOS02LjUtMjIuMQoJCWMtNS41LTUuMy0xMi45LTguMS0yMi4yLTguMWMtOS4zLDAtMTcsMy0yMi45LDlsLTEuNywxLjhsLTAuNy0yLjRjLTEuNy01LjYtNS40LTguNC0xMS40LTguNGMtOC4xLDAtMTEuOSwzLjctMTEuOSwxMS43djU0LjIKCQljMCw3LjksMy44LDExLjYsMTEuOSwxMS42YzguMSwwLDExLjktMy43LDExLjktMTEuNnYtMzdjMC4yLTUuMiwxLjEtOC45LDIuNi0xMS4yYzMtNC44LDcuNi03LjIsMTMuOC03LjJjNS45LDAsOS43LDEuOSwxMS4zLDUuOAoJCWMxLjUsMy41LDIuMiw4LjMsMi4yLDE0LjRMMzYxLjIsMTUxLjl6Ii8+Cgk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNNDYzLjYsMTQ0LjlsMjMuNi01Mi4xdjU3LjljMCwzLjYsMS4zLDYuNiwzLjksOS4xYzIuNiwyLjUsNS42LDMuNyw5LjMsMy43YzMuNywwLDYuOC0xLjIsOS4zLTMuNwoJCWMyLjYtMi41LDMuOC01LjUsMy44LTkuMVY2Ni43YzAtMy41LTEuMi02LjUtMy44LTljLTIuNi0yLjUtNS42LTMuNy05LjMtMy43Yy01LDAtOC42LDItMTEuMSw1LjlsLTMwLjEsNzAuOQoJCWMwLDAtMzQuMS02OS4zLTM0LjItNjkuNWMtMS42LTMuMi00LTUuNC03LjUtNi41Yy0xLjUtMC41LTMtMC44LTQuNS0wLjhjLTEuOSwwLTMuOCwwLjQtNS42LDEuM2MtNSwyLjMtNy41LDUuOS03LjUsMTEuMQoJCWMwLDAuNCwwLDAuOCwwLjEsMS40bC0wLjEsOTAuOGMwLDMuNiwxLjYsNS4xLDUuMyw1LjFjMy44LDAsNS40LTEuNSw1LjQtNS4xVjkyLjZsMjguNSw1NC4zYzEuNiwzLjIsNCw1LjQsNy41LDYuNgoJCWMxLjUsMC41LDMsMC44LDQuNSwwLjhjMS45LDAsMy44LTAuNCw1LjYtMS4zQzQ2MC4yLDE1MS4zLDQ2My42LDE0NC45LDQ2My42LDE0NC45Ii8+Cgk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNNTQwLDE2MC45YzQuMiwxLjgsOC44LDIuNywxMy44LDIuN2MxMC43LDAsMTguMi0zLjYsMjMtMTEuMWwxLjUtMi40bDEuNyw0LjJjMiw0LjcsNS41LDcsMTAuNiw3CgkJYzMuMiwwLDUuOS0xLjEsOC4xLTMuNGMyLjMtMi4zLDMuNC01LDMuNC04LjNsLTAuMi0zMy45YzAtNS43LTAuOS0xMC41LTIuOC0xNC4zYy0xLjgtMy43LTUtNi45LTkuNS05LjVjLTAuOS0wLjUtMi0xLjEtMy4zLTEuNwoJCWwtMC41LTAuMmMtNi4xLTIuNi0xMy41LTMuOS0yMi4xLTMuOWMtMy41LDAtNy45LDAuNC0xMywxLjJjLTQuOSwwLjctOS40LDItMTMuMyw0Yy0zLjUsMS43LTUuMiwzLjktNS4yLDYuNwoJCWMwLDIuMSwwLjcsMy41LDIuMyw0LjZjMS43LDEuMSwzLjgsMS43LDYuMSwxLjdjMS45LDAsMy41LTAuNCw0LjgtMS4xYzEuNC0wLjgsMy4xLTIsNC45LTMuN2MyLTEuOCwzLjgtMy4yLDUuMy00LjEKCQljMS43LTEsMy44LTEuNSw2LjItMS41YzUuMywwLDkuNCwxLjcsMTIuMiw1LjJjMi43LDMuMyw0LjEsNy44LDQuMSwxMy4xdjEuNWgtNi45Yy00LjgsMC05LjksMC40LTE1LDEuM2MtNS4xLDAuOS0xMCwyLjQtMTQuNiw0LjQKCQljLTQuNSwyLTguMiw0LjgtMTEsOC4zYy0yLjgsMy41LTQuMiw3LjgtNC4yLDEyLjdjMCw0LjksMS4yLDkuMiwzLjcsMTIuNkM1MzIuNiwxNTYuNCw1MzUuOSwxNTkuMSw1NDAsMTYwLjkgTTU1Ny42LDEyNS42CgkJYzQuNy0zLjMsMTAuNC01LDE2LjktNWg0LjR2Ni42YzAsNC4xLTAuMiw3LjUtMC42LDkuOGMtMC4zLDIuNS0xLjQsNS4yLTMuMSw4Yy0zLjcsNS41LTguMiw4LjQtMTMuNSw4LjRjLTMuNSwwLTYuNC0xLjMtOC41LTMuOQoJCWMtMi0yLjUtMy01LjUtMy05QzU1MC4zLDEzNCw1NTIuOCwxMjksNTU3LjYsMTI1LjYiLz4KCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik02MjkuMSwxNjMuNmMzLjIsMCw1LjktMS4xLDguMS0zLjRjMi4yLTIuMywzLjMtNSwzLjMtOC4zbDAtMjcuOWMwLjMtNS45LDEuMy0xMC4zLDMuMS0xMy41CgkJYzIuMi00LjQsNS4yLTYuNyw4LjYtNi43YzEuMywwLDMuMSwwLjQsNS41LDEuMWMyLjEsMC42LDMuOCwwLjksNS4yLDAuOWMyLjEsMCwzLjctMC45LDQuOS0yLjdjMS40LTIuMSwyLTQuMywyLTYuOAoJCWMwLTMuMS0xLTUuNS0yLjktNy40Yy0yLTEuOS00LjQtMi45LTcuNS0yLjljLTMuOCwwLTcuNSwxLjUtMTAuOSw0LjVjLTEuOSwxLjgtMy43LDMuOC01LjQsNi4xbC0yLjEsMi45bC0wLjUtMy41CgkJYy0xLTYuOC00LjYtOS45LTExLjMtOS45Yy0zLjIsMC01LjksMS4xLTguMiwzLjRjLTIuMiwyLjItMy4zLDQuOS0zLjMsOC4ydjU0LjJjMCwzLjMsMS4xLDYsMy4zLDguMwoJCUM2MjMuMiwxNjIuNSw2MjUuOCwxNjMuNiw2MjkuMSwxNjMuNiIvPgoJPHBhdGggY2xhc3M9InN0MCIgZD0iTTI4MS43LDg1LjdjLTguMiwwLTEyLDMuOC0xMiwxMS44djU0LjNjMCw4LjEsMy44LDExLjgsMTIsMTEuOGM4LjEsMCwxMS45LTMuOCwxMS45LTExLjhWOTcuNAoJCUMyOTMuNSw4OS40LDI4OS44LDg1LjcsMjgxLjcsODUuNyIvPgoJPGc+CgkJPHBhdGggY2xhc3M9InN0MCIgZD0iTTI4MS4xLDc3LjhjMTAuNiwwLDExLjktNS4zLDExLjktOS4ycy0xLjItOS4zLTExLjktOS4zYy0xMC43LDAtMTIsNS4zLTEyLDkuMwoJCQlDMjY5LjEsNzIuNiwyNzAuNCw3Ny44LDI4MS4xLDc3Ljh6Ii8+Cgk8L2c+CjwvZz4KPC9zdmc+Cg=="
+          alt="WinMart" class="h-8 w-auto" />
       </a>
 
       <!-- Search bar -->
       <div class="flex-1 mx-6 relative">
         <div class="relative">
           <i class="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
-          <input
-            type="search"
-            placeholder="Tìm kiếm sản phẩm..."
-            class="w-full rounded-full pl-10 pr-4 py-2 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-red-500"
-          />
+          <input type="search" placeholder="Tìm kiếm sản phẩm..."
+            class="w-full rounded-full pl-10 pr-4 py-2 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-red-500" />
         </div>
       </div>
 
       <!-- Location -->
-      <div class="flex items-center space-x-2 bg-red-500 px-4 py-2 rounded-full cursor-pointer hover:bg-red-700 transition">
+      <div
+        class="flex items-center space-x-2 bg-red-500 px-4 py-2 rounded-full cursor-pointer hover:bg-red-700 transition">
         <i class="fas fa-map-marker-alt"></i>
         <span>Giao Hàng</span>
       </div>
@@ -92,7 +95,8 @@
             <i class="fas fa-chevron-down text-xs"></i>
           </button>
           <!-- Dropdown menu -->
-          <div class="absolute left-0 top-full mt-1 bg-white text-gray-900 rounded-md shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-200 z-50 w-64">
+          <div
+            class="absolute left-0 top-full mt-1 bg-white text-gray-900 rounded-md shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-200 z-50 w-64">
             <ul class="py-2">
               <li class="group/item relative">
                 <a href="#" class="flex items-center justify-between px-4 py-2 hover:bg-gray-100">
@@ -164,57 +168,90 @@
   <!-- Main content -->
   <main class="container mx-auto p-4 space-y-8">
 
-    <!-- Banner slider -->
-    <section class="banner-slider h-[400px] rounded-lg overflow-hidden relative">
-      <div class="banner-slide active">
-        <img
-          src="https://cdn-crownx.winmart.vn/images/prod/162964755378716287335342581619508606172%20(1).png"
-          alt="Banner 1"
-          class="w-full h-full object-cover"
-        />
+    <!-- Banner section -->
+    <section class="grid grid-cols-4 gap-4 h-[400px]">
+      <!-- Main banner (3 columns) -->
+      <div class="col-span-3 relative overflow-hidden rounded-lg">
+        <div class="banner-slide active">
+          <img
+            src="https://s3-hcmc02.higiocloud.vn/images/2025/05/homepage_867x400-20250520070811.jpg"
+            alt="Banner 1"
+            class="w-full h-[400px] object-cover"
+          />
+        </div>
+        <div class="banner-slide">
+          <img
+            src="https://s3-hcmc02.higiocloud.vn/images/2025/05/mungquoctethieunhi_sanvouchervuihety_867x400-20250529022150.jpg"
+            alt="Banner 2"
+            class="w-full h-[400px] object-cover"
+          />
+        </div>
+        <div class="banner-slide">
+          <img
+            src="https://s3-hcmc02.higiocloud.vn/images/2025/05/14-home-banner-867x400-20052025-20250529030334.jpg"
+            alt="Banner 3"
+            class="w-full h-[400px] object-cover"
+          />
+        </div>
+        <!-- Banner controls -->
+        <button id="prevBtn" class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/50 hover:bg-white/80 rounded-full p-2 transition">
+          <i class="fas fa-chevron-left text-2xl"></i>
+        </button>
+        <button id="nextBtn" class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/50 hover:bg-white/80 rounded-full p-2 transition">
+          <i class="fas fa-chevron-right text-2xl"></i>
+        </button>
       </div>
-      <div class="banner-slide">
-        <img
-          src="https://cdn-crownx.winmart.vn/images/prod/162964755378716287335342581619508606172%20(2).png"
-          alt="Banner 2"
-          class="w-full h-full object-cover"
-        />
+      
+      <!-- Side banners (1 column) -->
+      <div class="flex flex-col space-y-4">
+        <div class="h-[195px] bg-white rounded-lg overflow-hidden">
+          <img
+            src="https://s3-hcmc02.higiocloud.vn/images/2025/05/15-sub-banner-614x397-20052025-20250529030421.jpg"
+            alt="Side Banner 1"
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <div class="h-[195px] bg-white rounded-lg overflow-hidden">
+          <img
+            src="https://s3-hcmc02.higiocloud.vn/images/2025/05/15-sub-banner-614x397-20052025-20250529030421.jpg"
+            alt="Side Banner 2"
+            class="w-full h-full object-cover"
+          />
+        </div>
       </div>
-      <!-- Banner controls -->
-      <button class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/50 hover:bg-white/80 rounded-full p-2 transition">
-        <i class="fas fa-chevron-left text-2xl"></i>
-      </button>
-      <button class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/50 hover:bg-white/80 rounded-full p-2 transition">
-        <i class="fas fa-chevron-right text-2xl"></i>
-      </button>
     </section>
 
     <!-- Category shortcuts -->
     <section class="grid grid-cols-5 gap-4">
       <a href="#" class="flex flex-col items-center p-4 bg-white rounded-lg hover:shadow-md transition">
-        <img src="https://cdn-crownx.winmart.vn/images/prod/rau-cu-qua.png" alt="Rau củ quả" class="w-16 h-16 object-contain" />
+        <img src="https://cdn-crownx.winmart.vn/images/prod/rau-cu-qua.png" alt="Rau củ quả"
+          class="w-16 h-16 object-contain" />
         <span class="mt-2 text-sm font-medium text-center">Rau củ quả</span>
       </a>
       <a href="#" class="flex flex-col items-center p-4 bg-white rounded-lg hover:shadow-md transition">
-        <img src="https://cdn-crownx.winmart.vn/images/prod/thit-hai-san.png" alt="Thịt - Hải sản" class="w-16 h-16 object-contain" />
+        <img src="https://cdn-crownx.winmart.vn/images/prod/thit-hai-san.png" alt="Thịt - Hải sản"
+          class="w-16 h-16 object-contain" />
         <span class="mt-2 text-sm font-medium text-center">Thịt - Hải sản</span>
       </a>
       <a href="#" class="flex flex-col items-center p-4 bg-white rounded-lg hover:shadow-md transition">
-        <img src="https://cdn-crownx.winmart.vn/images/prod/sua-do-uong.png" alt="Sữa - Đồ uống" class="w-16 h-16 object-contain" />
+        <img src="https://cdn-crownx.winmart.vn/images/prod/sua-do-uong.png" alt="Sữa - Đồ uống"
+          class="w-16 h-16 object-contain" />
         <span class="mt-2 text-sm font-medium text-center">Sữa - Đồ uống</span>
       </a>
       <a href="#" class="flex flex-col items-center p-4 bg-white rounded-lg hover:shadow-md transition">
-        <img src="https://cdn-crownx.winmart.vn/images/prod/banh-keo.png" alt="Bánh kẹo" class="w-16 h-16 object-contain" />
+        <img src="https://cdn-crownx.winmart.vn/images/prod/banh-keo.png" alt="Bánh kẹo"
+          class="w-16 h-16 object-contain" />
         <span class="mt-2 text-sm font-medium text-center">Bánh kẹo</span>
       </a>
       <a href="#" class="flex flex-col items-center p-4 bg-white rounded-lg hover:shadow-md transition">
-        <img src="https://cdn-crownx.winmart.vn/images/prod/mi-gao.png" alt="Mì - Gạo" class="w-16 h-16 object-contain" />
+        <img src="https://cdn-crownx.winmart.vn/images/prod/mi-gao.png" alt="Mì - Gạo"
+          class="w-16 h-16 object-contain" />
         <span class="mt-2 text-sm font-medium text-center">Mì - Gạo</span>
       </a>
     </section>
 
     <!-- Promotional banner -->
-    <section class="bg-gradient-to-r from-yellow-400 to-yellow-500 rounded-lg p-6 text-white">
+    <section class="bg-[#2c2c2c] rounded-lg p-6 text-white">
       <div class="flex items-center justify-between">
         <div class="flex items-center space-x-4">
           <img src="https://cdn-crownx.winmart.vn/images/prod/flash-sale.png" alt="Flash Sale" class="w-12 h-12" />
@@ -223,10 +260,10 @@
             <p class="text-sm">Kết thúc trong</p>
           </div>
         </div>
-        <div class="flex space-x-2 font-mono text-2xl">
-          <div class="bg-red-600 px-3 py-1 rounded">03</div>
-          <div class="bg-red-600 px-3 py-1 rounded">41</div>
-          <div class="bg-red-600 px-3 py-1 rounded">30</div>
+        <div id="countdown" class="flex space-x-2 font-mono text-2xl">
+          <div class="bg-red-600 px-3 py-1 rounded hours">00</div>
+          <div class="bg-red-600 px-3 py-1 rounded minutes">00</div>
+          <div class="bg-red-600 px-3 py-1 rounded seconds">00</div>
         </div>
       </div>
     </section>
@@ -238,7 +275,8 @@
         <!-- Product card -->
         <div class="bg-white rounded-lg p-4 hover:shadow-lg transition">
           <div class="relative">
-            <img src="https://cdn-crownx.winmart.vn/images/prod/dutch-lady.jpg" alt="Product" class="w-full h-48 object-contain" />
+            <img src="https://cdn-crownx.winmart.vn/images/prod/dutch-lady.jpg" alt="Product"
+              class="w-full h-48 object-contain" />
             <div class="absolute top-2 left-2 bg-red-600 text-white text-xs px-2 py-1 rounded">-19%</div>
             <button class="absolute bottom-2 right-2 bg-red-600 text-white text-xs p-2 rounded-full hover:bg-red-700">
               <i class="fas fa-shopping-cart"></i>
@@ -327,23 +365,31 @@
 
       <div class="text-sm text-gray-600">
         <p class="font-bold mb-2">Công Ty Cổ Phần Dịch Vụ Thương Mại Tổng Hợp WinCommerce</p>
-        <p class="mb-2">Mã số doanh nghiệp: 0104918404 Đăng ký lần đầu ngày 20 tháng 09 năm 2010, đăng ký thay đổi lần thứ 48, ngày 30 tháng 06 năm 2023</p>
-        <p class="mb-2">Địa chỉ giao dịch Hà Nội: Tầng 6, Toà nhà trung tâm Quốc tế, số 17 Ngô Quyền, Phường Tràng Tiền, Quận Hoàn Kiếm, Thành Phố Hà Nội</p>
+        <p class="mb-2">Mã số doanh nghiệp: 0104918404 Đăng ký lần đầu ngày 20 tháng 09 năm 2010, đăng ký thay đổi lần
+          thứ 48, ngày 30 tháng 06 năm 2023</p>
+        <p class="mb-2">Địa chỉ giao dịch Hà Nội: Tầng 6, Toà nhà trung tâm Quốc tế, số 17 Ngô Quyền, Phường Tràng Tiền,
+          Quận Hoàn Kiếm, Thành Phố Hà Nội</p>
         <p class="mb-2">Trụ sở chính: Số 23 Lê Duẩn, Phường Bến Nghé, Quận 1, Thành phố Hồ Chí Minh, Việt Nam</p>
-        <p>Địa chỉ giao dịch Tp.HCM: Tầng 12, Tòa nhà Mplaza SaiGon, số 39 Lê Duẩn, Phường Bến Nghé, Quận 1, TP Hồ Chí Minh, Việt Nam</p>
+        <p>Địa chỉ giao dịch Tp.HCM: Tầng 12, Tòa nhà Mplaza SaiGon, số 39 Lê Duẩn, Phường Bến Nghé, Quận 1, TP Hồ Chí
+          Minh, Việt Nam</p>
       </div>
     </div>
   </footer>
 
-  <!-- Simple banner slider script -->
+  <!-- Banner slider and countdown scripts -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
+      // Banner slider functionality
       const slides = document.querySelectorAll('.banner-slide');
       let currentSlide = 0;
+      let slideInterval;
 
       function showSlide(index) {
-        slides.forEach(slide => slide.classList.remove('active'));
-        slides[index].classList.add('active');
+        slides.forEach(slide => {
+          slide.style.opacity = '0';
+          slide.style.transition = 'opacity 0.5s ease-in-out';
+        });
+        slides[index].style.opacity = '1';
       }
 
       function nextSlide() {
@@ -356,14 +402,66 @@
         showSlide(currentSlide);
       }
 
-      // Auto advance slides
-      setInterval(nextSlide, 5000);
+      function startSlideShow() {
+        if (slideInterval) {
+          clearInterval(slideInterval);
+        }
+        slideInterval = setInterval(nextSlide, 5000);
+      }
+
+      // Initialize slider
+      showSlide(currentSlide);
+      startSlideShow();
 
       // Add click handlers for navigation buttons
-      document.querySelector('.banner-slider button:first-child').addEventListener('click', previousSlide);
-      document.querySelector('.banner-slider button:last-child').addEventListener('click', nextSlide);
+      const prevBtn = document.getElementById('prevBtn');
+      const nextBtn = document.getElementById('nextBtn');
+
+      prevBtn.addEventListener('click', () => {
+        previousSlide();
+        startSlideShow(); // Reset interval after manual navigation
+      });
+
+      nextBtn.addEventListener('click', () => {
+        nextSlide();
+        startSlideShow(); // Reset interval after manual navigation
+      });
+
+      // Countdown timer functionality
+      function formatTime(time) {
+        return time.toString().padStart(2, '0');
+      }
+
+      function updateCountdown(hours, minutes, seconds) {
+        document.querySelector('.hours').textContent = formatTime(hours);
+        document.querySelector('.minutes').textContent = formatTime(minutes);
+        document.querySelector('.seconds').textContent = formatTime(seconds);
+      }
+
+      function startCountdown(duration) {
+        let timer = duration;
+        
+        function tick() {
+          const hours = Math.floor(timer / 3600);
+          const minutes = Math.floor((timer % 3600) / 60);
+          const seconds = timer % 60;
+
+          updateCountdown(hours, minutes, seconds);
+
+          if (--timer < 0) {
+            timer = duration; // Reset timer when it reaches 0
+          }
+        }
+
+        tick(); // Initial call
+        setInterval(tick, 1000);
+      }
+
+      // Start countdown with 4 hours (14400 seconds)
+      startCountdown(14400);
     });
   </script>
 
 </body>
+
 </html>

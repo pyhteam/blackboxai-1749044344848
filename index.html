@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WinMart - Siêu thị số 1 Việt Nam</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+    .banner-slider {
+      position: relative;
+      overflow: hidden;
+    }
+    .banner-slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+    }
+    .banner-slide.active {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+  <!-- Top banner -->
+  <div class="bg-red-700 text-white text-center py-1 text-sm">
+    <p>Giao nhanh 2h - Đổi trả dễ dàng - Cam kết chất lượng</p>
+  </div>
+
+  <!-- Header -->
+  <header class="bg-red-600 text-white sticky top-0 z-50">
+    <div class="container mx-auto flex items-center justify-between p-4">
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center space-x-2">
+        <img src="https://winmart.vn/_next/static/images/logo-white-800x800-e4e120626c9ef3f3244a28f4dc6ce54c.png" 
+             alt="WinMart" 
+             class="h-8 w-auto" />
+      </a>
+
+      <!-- Search bar -->
+      <div class="flex-1 mx-6 relative">
+        <div class="relative">
+          <i class="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+          <input
+            type="search"
+            placeholder="Tìm kiếm sản phẩm..."
+            class="w-full rounded-full pl-10 pr-4 py-2 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-red-500"
+          />
+        </div>
+      </div>
+
+      <!-- Location -->
+      <div class="flex items-center space-x-2 bg-red-500 px-4 py-2 rounded-full cursor-pointer hover:bg-red-700 transition">
+        <i class="fas fa-map-marker-alt"></i>
+        <span>Giao Hàng</span>
+      </div>
+
+      <!-- Cart and Member -->
+      <div class="flex items-center space-x-6 ml-6">
+        <a href="cart.html" class="flex items-center space-x-2 hover:text-gray-200 transition">
+          <i class="fas fa-shopping-cart text-xl"></i>
+          <span>Giỏ hàng (0)</span>
+        </a>
+        <a href="login.html" class="flex items-center space-x-2 hover:text-gray-200 transition">
+          <i class="fas fa-user text-xl"></i>
+          <span>Hội viên</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-red-700 text-white text-sm">
+      <div class="container mx-auto flex items-center space-x-8 px-4 py-2">
+        <div class="group relative">
+          <button class="flex items-center space-x-2 hover:text-gray-200 focus:outline-none">
+            <i class="fas fa-bars"></i>
+            <span class="font-medium">Danh mục sản phẩm</span>
+            <i class="fas fa-chevron-down text-xs"></i>
+          </button>
+          <!-- Dropdown menu -->
+          <div class="absolute left-0 top-full mt-1 bg-white text-gray-900 rounded-md shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-200 z-50 w-64">
+            <ul class="py-2">
+              <li class="group/item relative">
+                <a href="#" class="flex items-center justify-between px-4 py-2 hover:bg-gray-100">
+                  <span>Rau củ quả tươi</span>
+                  <i class="fas fa-chevron-right text-xs"></i>
+                </a>
+              </li>
+              <li class="group/item relative">
+                <a href="#" class="flex items-center justify-between px-4 py-2 hover:bg-gray-100">
+                  <span>Thịt - Hải sản</span>
+                  <i class="fas fa-chevron-right text-xs"></i>
+                </a>
+              </li>
+              <li class="group/item relative">
+                <a href="#" class="flex items-center justify-between px-4 py-2 hover:bg-gray-100">
+                  <span>Thực phẩm đông lạnh</span>
+                  <i class="fas fa-chevron-right text-xs"></i>
+                </a>
+              </li>
+              <li class="group/item relative">
+                <a href="#" class="flex items-center justify-between px-4 py-2 hover:bg-gray-100">
+                  <span>Sữa - Đồ uống</span>
+                  <i class="fas fa-chevron-right text-xs"></i>
+                </a>
+              </li>
+              <li class="group/item relative">
+                <a href="#" class="flex items-center justify-between px-4 py-2 hover:bg-gray-100">
+                  <span>Bánh kẹo - Đồ ăn vặt</span>
+                  <i class="fas fa-chevron-right text-xs"></i>
+                </a>
+              </li>
+              <li class="group/item relative">
+                <a href="#" class="flex items-center justify-between px-4 py-2 hover:bg-gray-100">
+                  <span>Mì, miến, cháo, phở</span>
+                  <i class="fas fa-chevron-right text-xs"></i>
+                </a>
+              </li>
+              <li class="group/item relative">
+                <a href="#" class="flex items-center justify-between px-4 py-2 hover:bg-gray-100">
+                  <span>Dầu ăn - Gia vị</span>
+                  <i class="fas fa-chevron-right text-xs"></i>
+                </a>
+              </li>
+              <li class="group/item relative">
+                <a href="#" class="flex items-center justify-between px-4 py-2 hover:bg-gray-100">
+                  <span>Gạo - Đồ khô</span>
+                  <i class="fas fa-chevron-right text-xs"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <a href="#" class="hover:text-gray-200 transition flex items-center space-x-1">
+          <i class="fas fa-store"></i>
+          <span>Danh sách cửa hàng</span>
+        </a>
+        <a href="#" class="hover:text-gray-200 transition flex items-center space-x-1">
+          <i class="fas fa-newspaper"></i>
+          <span>Tin tức WinMart</span>
+        </a>
+        <a href="#" class="hover:text-gray-200 transition flex items-center space-x-1">
+          <i class="fas fa-headset"></i>
+          <span>Tư vấn mua hàng</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main content -->
+  <main class="container mx-auto p-4 space-y-8">
+
+    <!-- Banner slider -->
+    <section class="banner-slider h-[400px] rounded-lg overflow-hidden relative">
+      <div class="banner-slide active">
+        <img
+          src="https://cdn-crownx.winmart.vn/images/prod/162964755378716287335342581619508606172%20(1).png"
+          alt="Banner 1"
+          class="w-full h-full object-cover"
+        />
+      </div>
+      <div class="banner-slide">
+        <img
+          src="https://cdn-crownx.winmart.vn/images/prod/162964755378716287335342581619508606172%20(2).png"
+          alt="Banner 2"
+          class="w-full h-full object-cover"
+        />
+      </div>
+      <!-- Banner controls -->
+      <button class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/50 hover:bg-white/80 rounded-full p-2 transition">
+        <i class="fas fa-chevron-left text-2xl"></i>
+      </button>
+      <button class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/50 hover:bg-white/80 rounded-full p-2 transition">
+        <i class="fas fa-chevron-right text-2xl"></i>
+      </button>
+    </section>
+
+    <!-- Category shortcuts -->
+    <section class="grid grid-cols-5 gap-4">
+      <a href="#" class="flex flex-col items-center p-4 bg-white rounded-lg hover:shadow-md transition">
+        <img src="https://cdn-crownx.winmart.vn/images/prod/rau-cu-qua.png" alt="Rau củ quả" class="w-16 h-16 object-contain" />
+        <span class="mt-2 text-sm font-medium text-center">Rau củ quả</span>
+      </a>
+      <a href="#" class="flex flex-col items-center p-4 bg-white rounded-lg hover:shadow-md transition">
+        <img src="https://cdn-crownx.winmart.vn/images/prod/thit-hai-san.png" alt="Thịt - Hải sản" class="w-16 h-16 object-contain" />
+        <span class="mt-2 text-sm font-medium text-center">Thịt - Hải sản</span>
+      </a>
+      <a href="#" class="flex flex-col items-center p-4 bg-white rounded-lg hover:shadow-md transition">
+        <img src="https://cdn-crownx.winmart.vn/images/prod/sua-do-uong.png" alt="Sữa - Đồ uống" class="w-16 h-16 object-contain" />
+        <span class="mt-2 text-sm font-medium text-center">Sữa - Đồ uống</span>
+      </a>
+      <a href="#" class="flex flex-col items-center p-4 bg-white rounded-lg hover:shadow-md transition">
+        <img src="https://cdn-crownx.winmart.vn/images/prod/banh-keo.png" alt="Bánh kẹo" class="w-16 h-16 object-contain" />
+        <span class="mt-2 text-sm font-medium text-center">Bánh kẹo</span>
+      </a>
+      <a href="#" class="flex flex-col items-center p-4 bg-white rounded-lg hover:shadow-md transition">
+        <img src="https://cdn-crownx.winmart.vn/images/prod/mi-gao.png" alt="Mì - Gạo" class="w-16 h-16 object-contain" />
+        <span class="mt-2 text-sm font-medium text-center">Mì - Gạo</span>
+      </a>
+    </section>
+
+    <!-- Promotional banner -->
+    <section class="bg-gradient-to-r from-yellow-400 to-yellow-500 rounded-lg p-6 text-white">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center space-x-4">
+          <img src="https://cdn-crownx.winmart.vn/images/prod/flash-sale.png" alt="Flash Sale" class="w-12 h-12" />
+          <div>
+            <h3 class="text-2xl font-bold">Flash Sale</h3>
+            <p class="text-sm">Kết thúc trong</p>
+          </div>
+        </div>
+        <div class="flex space-x-2 font-mono text-2xl">
+          <div class="bg-red-600 px-3 py-1 rounded">03</div>
+          <div class="bg-red-600 px-3 py-1 rounded">41</div>
+          <div class="bg-red-600 px-3 py-1 rounded">30</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product grid -->
+    <section>
+      <h2 class="text-xl font-bold mb-4">Sản phẩm nổi bật</h2>
+      <div class="grid grid-cols-5 gap-4">
+        <!-- Product card -->
+        <div class="bg-white rounded-lg p-4 hover:shadow-lg transition">
+          <div class="relative">
+            <img src="https://cdn-crownx.winmart.vn/images/prod/dutch-lady.jpg" alt="Product" class="w-full h-48 object-contain" />
+            <div class="absolute top-2 left-2 bg-red-600 text-white text-xs px-2 py-1 rounded">-19%</div>
+            <button class="absolute bottom-2 right-2 bg-red-600 text-white text-xs p-2 rounded-full hover:bg-red-700">
+              <i class="fas fa-shopping-cart"></i>
+            </button>
+          </div>
+          <div class="mt-4">
+            <h3 class="text-sm font-medium line-clamp-2">DUTCH LADY STT cao khỏe có đường 110ml</h3>
+            <p class="text-xs text-gray-500 mt-1">ĐVT: Gói 4</p>
+            <div class="mt-2 flex items-center justify-between">
+              <div>
+                <span class="text-red-600 font-bold">15.800đ</span>
+                <span class="text-gray-400 text-xs line-through ml-1">19.500đ</span>
+              </div>
+              <span class="text-xs text-gray-500">Đã bán 1.2k</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- More product cards with similar structure -->
+        <!-- Repeat the product card structure with different data -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-100 text-gray-700 mt-12">
+    <div class="container mx-auto px-4 py-12">
+      <div class="grid grid-cols-4 gap-8 mb-8">
+        <div>
+          <h3 class="font-bold text-lg mb-4">Về chúng tôi</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-red-600 transition">Giới thiệu về WinMart</a></li>
+            <li><a href="#" class="hover:text-red-600 transition">Danh sách cửa hàng</a></li>
+            <li><a href="#" class="hover:text-red-600 transition">Quản lý chất lượng</a></li>
+            <li><a href="#" class="hover:text-red-600 transition">Chính sách bảo mật</a></li>
+            <li><a href="#" class="hover:text-red-600 transition">Điều khoản và điều kiện giao dịch</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="font-bold text-lg mb-4">Hỗ trợ khách hàng</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-red-600 transition">Trung tâm hỗ trợ khách hàng</a></li>
+            <li><a href="#" class="hover:text-red-600 transition">Chính sách giao hàng</a></li>
+            <li><a href="#" class="hover:text-red-600 transition">Chính sách thanh toán</a></li>
+            <li><a href="#" class="hover:text-red-600 transition">Chính sách đổi trả</a></li>
+            <li><a href="#" class="hover:text-red-600 transition">Đánh giá góp ý</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="font-bold text-lg mb-4">Chăm sóc khách hàng</h3>
+          <p class="flex items-center space-x-2 mb-2">
+            <i class="fas fa-phone text-red-600"></i>
+            <span>Mua Online: 0247 1066866</span>
+          </p>
+          <p class="flex items-center space-x-2">
+            <i class="fas fa-envelope text-red-600"></i>
+            <span>Email: cskh@winmart.masangroup.com</span>
+          </p>
+          <h3 class="font-bold text-lg mt-6 mb-4">Kết nối với chúng tôi</h3>
+          <div class="flex space-x-4">
+            <a href="#" class="text-blue-600 hover:text-blue-700">
+              <i class="fab fa-facebook-square text-2xl"></i>
+            </a>
+            <a href="#" class="text-red-600 hover:text-red-700">
+              <i class="fab fa-youtube text-2xl"></i>
+            </a>
+            <a href="#" class="text-blue-400 hover:text-blue-500">
+              <i class="fab fa-telegram text-2xl"></i>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="font-bold text-lg mb-4">Tải ứng dụng trên điện thoại</h3>
+          <div class="flex space-x-4">
+            <img src="https://winmart.vn/_next/static/images/app-store-2c7d2169.svg" alt="App Store" class="h-10" />
+            <img src="https://winmart.vn/_next/static/images/google-play-2c7d2169.svg" alt="Google Play" class="h-10" />
+          </div>
+        </div>
+      </div>
+
+      <hr class="border-gray-300 my-8" />
+
+      <div class="text-sm text-gray-600">
+        <p class="font-bold mb-2">Công Ty Cổ Phần Dịch Vụ Thương Mại Tổng Hợp WinCommerce</p>
+        <p class="mb-2">Mã số doanh nghiệp: 0104918404 Đăng ký lần đầu ngày 20 tháng 09 năm 2010, đăng ký thay đổi lần thứ 48, ngày 30 tháng 06 năm 2023</p>
+        <p class="mb-2">Địa chỉ giao dịch Hà Nội: Tầng 6, Toà nhà trung tâm Quốc tế, số 17 Ngô Quyền, Phường Tràng Tiền, Quận Hoàn Kiếm, Thành Phố Hà Nội</p>
+        <p class="mb-2">Trụ sở chính: Số 23 Lê Duẩn, Phường Bến Nghé, Quận 1, Thành phố Hồ Chí Minh, Việt Nam</p>
+        <p>Địa chỉ giao dịch Tp.HCM: Tầng 12, Tòa nhà Mplaza SaiGon, số 39 Lê Duẩn, Phường Bến Nghé, Quận 1, TP Hồ Chí Minh, Việt Nam</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Simple banner slider script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const slides = document.querySelectorAll('.banner-slide');
+      let currentSlide = 0;
+
+      function showSlide(index) {
+        slides.forEach(slide => slide.classList.remove('active'));
+        slides[index].classList.add('active');
+      }
+
+      function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+      }
+
+      function previousSlide() {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(currentSlide);
+      }
+
+      // Auto advance slides
+      setInterval(nextSlide, 5000);
+
+      // Add click handlers for navigation buttons
+      document.querySelector('.banner-slider button:first-child').addEventListener('click', previousSlide);
+      document.querySelector('.banner-slider button:last-child').addEventListener('click', nextSlide);
+    });
+  </script>
+
+</body>
+</html>
